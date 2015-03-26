@@ -17,7 +17,8 @@ public class MySQLConnectionPool implements Closeable {
         ds.setUsername(user);
         ds.setPassword(password);
 
-        ds.setMinimumIdle(2);
+        ds.setMinimumIdle(25);
+        ds.setMaximumPoolSize(25);
         ds.setPoolName("LogBlock-Connection-Pool");
 
         ds.addDataSourceProperty("useUnicode", "true");
